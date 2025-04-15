@@ -37,7 +37,7 @@ WORKDIR /app
 # Copy application code
 COPY . .
 
-RUN git clone https://github.com/Devermint/plugin-aptos ./packages/plugin-aptos
+RUN git clone https://github.com/Devermint/plugin-aptos /app/packages/plugin-aptos
 
 # Install dependencies
 RUN pnpm install --no-frozen-lockfile
