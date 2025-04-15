@@ -31,6 +31,8 @@ RUN npm install -g pnpm@9.15.4 && \
 # Set Python 3 as the default python
 RUN ln -sf /usr/bin/python3 /usr/bin/python
 
+RUN git clone https://github.com/Devermint/plugin-aptos ./packages/plugin-aptos
+
 # Set the working directory
 WORKDIR /app
 
@@ -44,7 +46,6 @@ RUN pnpm install --no-frozen-lockfile
 RUN pnpm run build && pnpm prune --prod
 
 # Add plugins
-RUN git clone https://github.com/Devermint/plugin-aptos ./packages/plugin-aptos
 # RUN npx elizaos plugins add @elizaos-plugins/plugin-aptos
 
 # Final runtime image
