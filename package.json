@@ -91,8 +91,7 @@
     "pnpm": "9.15.7",
     "sharp": "0.33.5",
     "ws": "8.18.0",
-    "zod": "3.24.2",
-    "@elizaos/plugin-aptos": "workspace:*"
+    "zod": "3.24.2"
   },
   "packageManager": "pnpm@9.15.7",
   "workspaces": [
