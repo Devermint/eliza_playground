@@ -31,13 +31,13 @@ RUN npm install -g pnpm@9.15.4 && \
 # Set Python 3 as the default python
 RUN ln -sf /usr/bin/python3 /usr/bin/python
 
-RUN git clone https://github.com/Devermint/plugin-aptos ./packages/plugin-aptos
-
 # Set the working directory
 WORKDIR /app
 
 # Copy application code
 COPY . .
+
+RUN git clone https://github.com/Devermint/plugin-aptos ./packages/plugin-aptos
 
 # Install dependencies
 RUN pnpm install --no-frozen-lockfile
