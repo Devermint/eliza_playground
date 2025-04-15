@@ -37,7 +37,7 @@ WORKDIR /app
 # Copy application code
 COPY . .
 
-RUN git clone https://github.com/Devermint/plugin-aptos /app/packages/plugin-aptos
+# RUN git clone https://github.com/Devermint/plugin-aptos /app/packages/plugin-aptos
 
 # Install dependencies
 RUN pnpm install --no-frozen-lockfile
@@ -46,7 +46,7 @@ RUN pnpm install --no-frozen-lockfile
 RUN pnpm run build && pnpm prune --prod
 
 # Add plugins
-# RUN npx elizaos plugins add @elizaos-plugins/plugin-aptos
+RUN npx elizaos plugins add @elizaos-plugins/plugin-aptos
 
 # Final runtime image
 FROM node:23.3.0-slim
