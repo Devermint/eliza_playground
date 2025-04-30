@@ -4,3 +4,6 @@
 [submodule "packages/plugin-aptos"]
 	path = packages/plugin-aptos
 	url = https://github.com/Devermint/plugin-aptos.git
+[submodule "packages/plugin-goat"]
+	path = packages/plugin-goat
+	url = https://github.com/Devermint/plugin-goat
